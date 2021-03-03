@@ -196,9 +196,16 @@ namespace osukps {
 			Size = new Size(pnlKeys.Width + pnlInfo.Width, 36);
 		}
 
+		private void SetWindowOnTop(bool top) {
+			this.TopMost = top;
+		}
+
 		private void hideButtonsToolStripMenuItem_Click(object sender, EventArgs e) {
 			settingsModified = true;
 			UpdateHideButtonsMenuItem(hideButtonsToolStripMenuItem.Checked = !hideButtonsToolStripMenuItem.Checked);
+		}
+		private void windowOnTopToolStripMenuItem_Click(object sender, EventArgs e) {
+			UpdateWindowOnTopMenuItem(windowOnTopToolStripMenuItem.Checked = !windowOnTopToolStripMenuItem.Checked);
 		}
 
 		private void UpdateHideButtonsMenuItem(bool dohide) {
@@ -210,6 +217,17 @@ namespace osukps {
 
 			hideButtonsToolStripMenuItem.Text = "Hide buttons";
 			SetVisibleButtonCount(this.buttonCount);
+		}
+
+		private void UpdateWindowOnTopMenuItem(bool top) {
+			if (top) {
+				windowOnTopToolStripMenuItem.Text = "Disable window on top";
+				SetWindowOnTop(top);
+				return;
+			}
+
+			windowOnTopToolStripMenuItem.Text = "Enable window on top";
+			SetWindowOnTop(top);
 		}
 
 		private void tsiExit_Click(object sender, EventArgs e) {

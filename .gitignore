@@ -1,6 +1,8 @@
 
 osukps/obj/
 osukps/bin/
+.vs/*
+.vscode/*
 *.suo
 *.pdb
 *.vshost.exe

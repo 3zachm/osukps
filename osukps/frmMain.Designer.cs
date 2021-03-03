@@ -31,6 +31,7 @@
 			this.cms = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.buttonCountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.hideButtonsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.windowOnTopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
 			this.tmiEditKpsColors = new System.Windows.Forms.ToolStripMenuItem();
 			this.tmiEditGlobalInactiveColor = new System.Windows.Forms.ToolStripMenuItem();
@@ -121,6 +122,7 @@
 			this.cms.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.buttonCountToolStripMenuItem,
             this.hideButtonsToolStripMenuItem,
+			this.windowOnTopToolStripMenuItem,
             this.toolStripSeparator7,
             this.tmiEditKpsColors,
             this.tmiEditBackColor,
@@ -161,6 +163,13 @@
 			this.hideButtonsToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
 			this.hideButtonsToolStripMenuItem.Text = "Hide buttons";
 			this.hideButtonsToolStripMenuItem.Click += new System.EventHandler(this.hideButtonsToolStripMenuItem_Click);
+			//
+			// windowOnTopToolStripMenuItem
+			//
+			this.windowOnTopToolStripMenuItem.Name = "windowOnTopToolStripMenuItem";
+			this.windowOnTopToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+			this.windowOnTopToolStripMenuItem.Text = "Enable window on top";
+			this.windowOnTopToolStripMenuItem.Click += new System.EventHandler(this.windowOnTopToolStripMenuItem_Click);
 			// 
 			// toolStripSeparator7
 			// 
@@ -395,7 +404,6 @@
 			this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "osukps";
-			this.TopMost = true;
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
 			this.pnlInfo.ResumeLayout(false);
 			this.pnlInfo.PerformLayout();
@@ -441,6 +449,7 @@
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
 		private System.Windows.Forms.ToolStripMenuItem noConfigurationsFoundToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem hideButtonsToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem windowOnTopToolStripMenuItem;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
 		private System.Windows.Forms.ToolStripMenuItem tmiEditKpsColors;
 		private System.Windows.Forms.ToolStripMenuItem tsiReset;
